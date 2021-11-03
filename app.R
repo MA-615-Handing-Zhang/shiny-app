@@ -36,7 +36,7 @@ ui <- fluidPage(
                         
                       
                         ),
-               tabPanel("Percentage of High Bee Toxin",
+               tabPanel("Percentage of High Bee Toxin in California",
                        
                         plotOutput(outputId = "nameplot2")
                         

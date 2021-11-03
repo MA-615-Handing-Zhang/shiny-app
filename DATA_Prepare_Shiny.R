@@ -31,7 +31,7 @@ shi_func <- function(yr){
 #------------------------------------------------------
 ## Load data and wrangling data
 
-strawb <- read.csv("Strawberries.csv",fileEncoding = "latin1")
+strawb <- read.csv("Strawberries.csv")
 ## Drop the no-info columns
 
 drop_no_info_cols <- function(df){
@@ -129,7 +129,9 @@ pesticides <- mutate(pesticides, Pesticide = toupper(Pesticide))
 
 #trimws: Deletes leading/trailing Spaces
 
-strawb_new <- mutate(strawb_new, chemical_name = trimws(chemical_name))
+strawb_new <- mutate(strawb_new, chemical_name = str_trim(chemical_name))
+
+
 
 ## join two dataframe
 
